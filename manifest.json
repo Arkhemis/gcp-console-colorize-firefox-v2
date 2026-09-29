@@ -3,7 +3,7 @@
   "name": "GCP console colorize",
   "description": "Change GCP console color",
   "author": "Yuki Furuyama",
-  "version": "1.9",
+  "version": "2.0",
   "icons": {
     "16": "icon/icon_16x16.png",
     "48": "icon/icon_48x48.png",
@@ -20,6 +20,7 @@
   ],
   "background": {
     "service_worker": "background.js",
+    "scripts": ["background.js"],
     "type": "module"
   },
   "options_ui": {
@@ -28,5 +29,14 @@
   "permissions": [
     "storage",
     "webNavigation"
-  ]
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "gcp-console-colorize-firefox-v2@arkhemis",
+      "strict_min_version": "140.0",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
+    }
+  }
 }
